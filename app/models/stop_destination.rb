@@ -100,13 +100,6 @@ class StopDestination < Stop
     destination.phone_number
   end
 
-  def link_phone_number(url_click2call)
-    if !url_click2call.empty?
-      url_click2call.gsub('{TEL}', phone_number.to_s)
-    else
-      "tel:#{phone_number}"
-    end
-  end
 
   def to_s
     "#{active ? 'x' : '_'} #{destination.name}"

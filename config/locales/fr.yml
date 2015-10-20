@@ -827,6 +827,7 @@ fr:
       title: "Paramètres utilisateurs"
     form_settings:
       url_click2call_help: "URL de la solution de communication VOIP. L'URL doit prendre le paramètre '{TEL}' à l'emplacement du numéro de téléphone."
+
   vehicles:
     default_name: "Véhicule %{n}"
     emissions_nothing: "Aucun - %{n}"

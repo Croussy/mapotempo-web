@@ -819,7 +819,7 @@ en:
     edit_settings:
       title: "User's Settings"
     form_settings:
-      url_click2call_help: "URl of VOIP communications solution. In URL put '{TEL}' in location of the phone number"
+      url_click2call_help: "URL of VOIP communications solution. In URL set '{TEL}' in place of the phone number"
 
   vehicles:
     default_name: "Vehicle %{n}"

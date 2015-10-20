@@ -375,7 +375,8 @@ var destinations_index = function(params, api) {
     map_attribution = params.map_attribution,
     default_city = params.default_city,
     default_country = params.default_country,
-    take_over_default = params.take_over_default;
+    take_over_default = params.take_over_default,
+    url_click2call =  params.url_click2call;
 
   var map = L.map('map').setView([map_lat, map_lng], 13);
   L.tileLayer(map_layer_url, {
@@ -546,6 +547,11 @@ var destinations_index = function(params, api) {
         width: '100%'
       });
       select.next('.select2-container--bootstrap').addClass('input-sm');
+    });
+
+    $('.phone_link', $row).click(function(e){
+      phone_number_call($( '.phone_number', $row).attr('value'), url_click2call );
+      return false;
     });
   }
 
