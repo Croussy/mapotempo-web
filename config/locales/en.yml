@@ -283,6 +283,7 @@ en:
         current_password: "Current password"
         remember_me: "Remember me"
         api_key: "API Key"
+        url_click2call: "URL click2call"
         sign_in_count: "Connections count"
         sign_in_at: "Last connection"
       vehicle:
@@ -817,6 +818,8 @@ en:
       sign_out: "Sign out"
     edit_settings:
       title: "User's Settings"
+    form_settings:
+      url_click2call_help: "URl of VOIP communications solution. In URL put '{TEL}' in location of the phone number"
 
   vehicles:
     default_name: "Vehicle %{n}"

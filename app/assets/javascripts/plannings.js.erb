@@ -303,6 +303,8 @@ var plannings_edit = function(params) {
               m.openPopup();
               enlighten_stop(stop.stop_id);
             }
+          }).on('popupopen', function(e) {
+            $('.phone_number', e.popup._container).click(phone_number_call(e.popup._container));
           }).on('popupclose', function(e) {
             m.click = false;
           });

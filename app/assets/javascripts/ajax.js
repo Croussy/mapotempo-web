@@ -197,3 +197,12 @@ var fake_select2 = function(selector, callback) {
     .on('click', fake_select2_click)
     .on('keydown', fake_select2_key_event);
 }
+
+var phone_number_call = function(popup) {
+    $('.phone_number', popup).on('click', function (e) {
+        $.ajax({
+            url: $('.phone_number', popup).attr('href')
+        });
+        return false;
+    });
+}

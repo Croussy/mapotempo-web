@@ -284,6 +284,7 @@ fr:
         current_password: "Mot de passe actuel"
         remember_me: "Se rappeler de moi"
         api_key: "Clé d'API"
+        url_click2call: "URL Click2Call"
         sign_in_count: "Nombre de connexions"
         sign_in_at: "Dernière connexion"
       vehicle:
@@ -824,7 +825,8 @@ fr:
       sign_out: "Déconnexion"
     edit_settings:
       title: "Paramètres utilisateurs"
-
+    form_settings:
+      url_click2call_help: "URL de la solution de communication VOIP. L'URL doit prendre le paramètre '{TEL}' à l'emplacement du numéro de téléphone."
   vehicles:
     default_name: "Véhicule %{n}"
     emissions_nothing: "Aucun - %{n}"

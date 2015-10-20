@@ -290,6 +290,8 @@ var zonings_edit = function(params) {
               m.openPopup();
             }).on('mouseout', function(e) {
               m.closePopup();
+            }).on('popupopen', function(e){
+              $('.phone_number').click(phone_number_call());
             });
           }
         });
