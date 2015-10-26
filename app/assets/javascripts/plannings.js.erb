@@ -306,8 +306,7 @@ var plannings_edit = function(params) {
             }
           }).on('popupopen', function(e) {
             $('.phone_number', e.popup._container).click(function(e){
-              phone_number_call(e.currentTarget.innerHTML, url_click2call);
-              return false;
+              phone_number_call(e.currentTarget.innerHTML, url_click2call, e.target);
             });
           }).on('popupclose', function(e) {
             m.click = false;

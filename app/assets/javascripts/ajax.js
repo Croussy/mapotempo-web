@@ -198,9 +198,16 @@ var fake_select2 = function(selector, callback) {
     .on('keydown', fake_select2_key_event);
 }
 
-var phone_number_call = function(num, url) {
-    $.ajax({
-        url_phone_number: url.replace('{TEL}', num),
-    });
+var phone_number_call = function(num, url_template, link) {
+    //$.ajax({
+        //url: url_template.replace('{TEL}', num),
+        //success: function(){
+        //    console.log('success');
+        //},
+        //error: function(xhr, status, error){
+        //    console.log(error);
+        //}
+    link.href = url_template.replace('{TEL}', num);
+    //});
     return false;
 }

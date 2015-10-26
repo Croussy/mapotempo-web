@@ -550,8 +550,7 @@ var destinations_index = function(params, api) {
     });
 
     $('.phone_link', $row).click(function(e){
-      phone_number_call($( '.phone_number', $row).attr('value'), url_click2call );
-      return false;
+      phone_number_call($( '.phone_number', $row).attr('value'), url_click2call, e.currentTarget);
     });
   }
 
