@@ -200,8 +200,7 @@ var fake_select2 = function(selector, callback) {
 
 var phone_number_call = function(num, url) {
     $.ajax({
-        url: url.replace('{TEL}', num)
+        url_phone_number: url.replace('{TEL}', num),
     });
-    console.log(url.replace('{TEL}', num));
     return false;
 }
