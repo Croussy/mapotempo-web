@@ -815,7 +815,7 @@ var destinations_index = function(params, api) {
         10: {
           sorter: "digit"
         },
-        11: {
+        12: {
           sorter: false
         }
       },
@@ -893,7 +893,8 @@ var destinations_index = function(params, api) {
             return (isNaN(n[0].getTime()) || f[0] <= n[0]) && (isNaN(n[0].getTime()) || n[1] <= f[1]);
           },
           8: filter_text,
-          9: filter_text
+          9: filter_text,
+          10: filter_text
         },
         filter_formatter: {
           7: function($cell, indx) {
@@ -905,10 +906,10 @@ var destinations_index = function(params, api) {
               valueToHeader: false
             });
           },
-          10: function($cell, indx) {
+          11: function($cell, indx) {
             return false;
           },
-          11: function($cell, indx) {
+          12: function($cell, indx) {
             return false;
           }
         },
@@ -920,7 +921,7 @@ var destinations_index = function(params, api) {
           0: 'disable',
           2: 'disable',
           3: 'disable',
-          11: 'disable'
+          12: 'disable'
         }
       }
     };
