@@ -195,6 +195,19 @@ ActiveRecord::Schema.define(version: 20151027103159) do
     t.integer "router_id"
   end
 
+  create_table "rails_admin_histories", force: :cascade do |t|
+    t.text     "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      limit: 2
+    t.integer  "year",       limit: 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
+
   create_table "resellers", force: :cascade do |t|
     t.string   "host",        null: false
     t.string   "name",        null: false
@@ -380,6 +393,11 @@ ActiveRecord::Schema.define(version: 20151027103159) do
 
   add_index "vehicles", ["customer_id"], name: "fk__vehicles_customer_id", using: :btree
   add_index "vehicles", ["router_id"], name: "fk__vehicles_router_id", using: :btree
+
+  create_table "vehicles_zones", id: false, force: :cascade do |t|
+    t.integer "vehicle_id"
+    t.integer "zone_id"
+  end
 
   create_table "zones", force: :cascade do |t|
     t.text     "polygon"
