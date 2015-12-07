@@ -1,0 +1,6 @@
+en-US:
+  time:
+    formats:
+      default: "%m-%d-%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"

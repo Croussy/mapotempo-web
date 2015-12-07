@@ -26,8 +26,18 @@ fr:
   time:
     formats:
       default: "%d-%m-%Y"
-      short: "%b %d"
-      long: "%B %d, %Y"
+      short: "%d %b"
+      long: "%d %B, %Y"
+      hour_minute_second: "%H:%M:%S"
+      hour_minute: "%H:%M"
+      year_month_day: "%y-%m-%dT"
+      year_month_day_hour_minute: "%Y-%m-%dT %H:%M"
+      year_month_day_hour_minute_second: "%Y-%m-%dT%H:%M:%S"
+      day_month_year_hour_minute: "%d/%m/%Y %H:%M"
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      display_calendar: "dd-mm-yyyy"
 
   activemodel:
     models:
