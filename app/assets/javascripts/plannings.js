@@ -15,9 +15,10 @@
 // along with Mapotempo. If not, see:
 // <http://www.gnu.org/licenses/agpl.html>
 //
-var plannings_form = function() {
+var plannings_form = function(params) {
   $('#planning_date').datepicker({
     language: defaultLocale,
+    format: params.format_date_calendar,
     autoclose: true,
     calendarWeeks: true,
     todayHighlight: true
@@ -41,7 +42,7 @@ var plannings_new = function(params) {
 }
 
 var plannings_edit = function(params) {
-  plannings_form();
+  plannings_form(params);
 
   var planning_id = params.planning_id,
     zoning_id = params.zoning_id,
@@ -52,6 +53,7 @@ var plannings_edit = function(params) {
     vehicles_array = params.vehicles_array,
     vehicles_usages_map = params.vehicles_usages_map,
     url_click2call = params.url_click2call,
+    date_format_calendar = params.date_format_calendar,
     colors = params.colors,
     layer_zoning,
     markers = {},
